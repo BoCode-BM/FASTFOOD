@@ -139,13 +139,13 @@ body {
   padding: 0 2rem;
 }
 .infos img {
-  max-width: max(60%, 500px);
+  max-width: 60%;
   flex-basis: 1;
   object-fit: cover;
 }
 .info-text {
   flex: 1;
-  min-width: 400px;
+  min-width: 350px;
 }
 .info-text h2 {
   font-size: clamp(1.5rem, 5vw, 2rem);
@@ -196,7 +196,6 @@ body {
   background: whitesmoke;
   border: 1px solid var(--santa-fe);
   border-radius: 0 0 24px 0;
-  cursor: pointer;
   transition: all 0.3s ease;
 }
 .menu:hover {
@@ -212,19 +211,96 @@ body {
 @keyframes appear {
   from {
     opacity: 0;
-    clip-path: inset(100% 100% 0 0);
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
-    clip-path: inset(0 0 0 0);
+    transform: translateY(0);
   }
 }
 
-.hero,
-.info-text,
-.infos,
-.menu {
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 70%;
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none; /* Hidden by default on desktop */
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001; /* Above sticky header */
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: var(--vanilla);
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Media query for screens up to 800px */
+@media (max-width: 800px) {
+      .nav-links {
+          position: fixed;
+          right: -100%; /* Initially off-screen */
+          top: 0;
+          width: 300px; /* Reduced width */
+          height: 100%;
+          background-color: var(--pueblo);
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          transition: right 0.3s ease-in-out;
+          z-index: 1000;
+          box-shadow: -5px 0 15px rgba(0,0,0,0.2); /* Added shadow */
+      }
+  .nav-links.active {
+    right: 0; /* Slide in */
+  }
+
+  .nav-links li {
+    margin: 1.5rem 0;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger on mobile */
+  }
+
+  .header {
+    justify-content: space-between; /* To push logo left and hamburger right */
+  }
+}
+
+/* Animation for hamburger to cross */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+#main-content {
+    transition: filter 0.3s ease-in-out;
+}
+
+#main-content.blur-background {
+    filter: blur(4px);
+    pointer-events: none;
 }
