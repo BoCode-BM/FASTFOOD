@@ -175,13 +175,56 @@ body {
 }
 .menu-card {
   width: 100%;
-  max-width: 1200px;
   height: auto;
-  margin: 0 2rem;
+  padding: 0 2rem;
+  background: whitesmoke;
 }
 .menu-card h2 {
-
+  text-align: center;
+  font-family: "Title";
+  font-size: 2rem;
+  padding: 3rem 0;
 }
 .card {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.menu {
+  width: 100%;
+  padding: 0.5rem;
+  background: whitesmoke;
+  border: 1px solid var(--santa-fe);
+  border-radius: 0 0 24px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.menu:hover {
+  transform: scale(1.005);
+  box-shadow: 0 0 10px var(--paco);
+}
+.menu img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    clip-path: inset(100% 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.hero,
+.info-text,
+.infos,
+.menu {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 70%;
 }
