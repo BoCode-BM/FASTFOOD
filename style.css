@@ -304,3 +304,146 @@ body {
     filter: blur(4px);
     pointer-events: none;
 }
+/* Footer Styles */
+.footer {
+    background-color: var(--paco);
+    color: var(--vanilla);
+    padding: 3rem 2rem 1rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--santa-fe);
+}
+
+.footer-logo,
+.footer-links,
+.footer-social {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo p {
+    font-family: "Texte";
+    margin-top: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.footer-links h3,
+.footer-social h3 {
+    font-family: "Title";
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--rock-spray);
+}
+
+.footer-links ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--vanilla);
+    font-family: "Texte";
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--rock-spray);
+    padding-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.social-icons a {
+    color: var(--vanilla);
+    font-family: "Texte";
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--rock-spray);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    font-family: "Texte";
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links a:hover {
+        padding-left: 0;
+    }
+}
+/* Card Text and Button Styles */
+.menu h3 {
+    font-family: "Title";
+    font-size: 1.5rem;
+    color: var(--paco);
+    margin: 10px 0;
+}
+
+.menu p {
+    font-family: "Texte";
+    font-size: 0.9rem;
+    color: var(--pueblo);
+    margin-bottom: 1rem;
+}
+
+.menu span {
+    display: block;
+    font-family: "Title";
+    font-size: 1.2rem;
+    color: var(--rock-spray);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.btn4 {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--pueblo);
+    color: var(--vanilla);
+    border: 2px solid var(--pueblo);
+    font-family: "Texte";
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.btn4:hover {
+    background-color: transparent;
+    color: var(--pueblo);
+}
+/* Alignment Styles */
+.menu-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+}
+
+.menu span {
+    margin-bottom: 0;
+    /* Remove bottom margin as it's now handled by flex alignment */
+}
