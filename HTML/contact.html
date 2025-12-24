@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - SITE-FASTFOOD</title>
+    <link rel="stylesheet" href="/assets/CSS/style.css">
+    <link rel="stylesheet" href="/assets/CSS/galerie.css">
+    <link rel="stylesheet" href="/assets/CSS/galerie.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo">FAST<b>FOOD</b></h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#menu">Menu</a></li>
+                <li><a href="galerie.html"> Galerie</a></li>
+                <li><a href="#"> About</a></li>
+                <li><a href="#">avis</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="contact-section">
+            <div class="contact-container">
+                <h2 class="hidden">Contactez-nous</h2>
+                <p class="hidden">Une question, une suggestion, ou juste envie de dire bonjour ? Remplissez le formulaire ci-dessous ou retrouvez-nous directement.</p>
+                <div class="contact-wrapper">
+                    <form id="contact-form" class="hidden">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Envoyer</button>
+                    </form>
+                    <div id="map" class="hidden"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2 class="logo">FAST<b>FOOD</b></h2>
+                <p>Le meilleur goût, la meilleure qualité.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FASTFOOD. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API&callback=initMap"></script>
+</body>
+
+</html>

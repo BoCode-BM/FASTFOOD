@@ -447,3 +447,19 @@ body {
     margin-bottom: 0;
     /* Remove bottom margin as it's now handled by flex alignment */
 }
+
+/* Menu Categories */
+.menu-category {
+    margin-bottom: 4rem;
+}
+
+.category-title {
+    font-family: 'Title';
+    font-size: 2.2rem;
+    color: var(--paco);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--rock-spray);
+    display: inline-block;
+}
