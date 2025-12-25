@@ -1,5 +1,7 @@
 # FASTFOOD - Votre Restaurant en Ligne
 
+![Aperçu du site FASTFOOD](Picture-website.png)
+
 Bienvenue sur le dépôt GitHub du site web FASTFOOD, la vitrine numérique de notre restaurant. Ce site statique a été conçu pour présenter notre menu, nos services, et permettre aux clients de nous contacter.
 
 ## Description du Projet
